@@ -25,7 +25,7 @@ class LendingsExport implements FromCollection, WithHeadings, WithMapping
          $lendings->total_item,
          $lendings->staff->name,
          $lendings->returned ? $lendings->returned->notes : $lendings->notes,
-         $lendings->date,
+         $lendings->date->format('F d, Y'),
          $lendings->returned ? $lendings->returned->return_date : 'Belum di kembalikan',
          $lendings->staff->role,
        ];

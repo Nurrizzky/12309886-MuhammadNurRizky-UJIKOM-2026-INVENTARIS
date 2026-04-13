@@ -26,4 +26,8 @@ class BorrowedItem extends Model
     public function returned() {
         return $this->hasOne(ReturnedItem::class, 'borrowed_id');
     }
+
+    protected $casts = [
+        'date' => 'datetime'
+    ];
 }
